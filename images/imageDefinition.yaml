@@ -1,0 +1,25 @@
+$schema: "1.0"
+name: "multiagent-hackathon-devbox"
+image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
+tasks:
+  - name: winget
+    description: Install Visual Studio Code
+    parameters:
+      package: Microsoft.VisualStudioCode
+  - name: winget
+    description: Install Git
+    parameters:
+      package: Git.Git
+  - name: winget
+    description: Install Python 3.12
+    parameters:
+      package: Python.Python.3.12
+  - name: winget
+    description: Install Docker Desktop
+    parameters:
+      package: Docker.DockerDesktop
+  - name: git-clone
+    description: Clone the MultiagentHackathon repository
+    parameters:
+      repositoryUrl: https://github.com/hdmeyer/MultiagentHackathon
+      directory: 'Z:\MultiagentHackathon'
